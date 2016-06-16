@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('master');
+    return view('index');
 });
+
+Route::post('operations', 'PaginasController@operations');
+
+/*
+ * AJAX Routes
+ */
+
+Route::get('queryValidation', function() {
+    return View::make('index');
+});
+
+Route::post('queryValidation', 'queryValidationController@queryValidation');
