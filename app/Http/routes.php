@@ -21,8 +21,8 @@ Route::post('operations', 'PaginasController@operations');
  * AJAX Routes
  */
 
-Route::get('queryValidation', function() {
+Route::get('queryResult', function() {
     return View::make('index');
 });
 
-Route::post('queryValidation', 'queryValidationController@queryValidation');
+Route::post('queryResult', 'QueryController@queryResult');

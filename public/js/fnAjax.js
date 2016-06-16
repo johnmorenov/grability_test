@@ -15,7 +15,7 @@ function runCubeQuery() {
 
     	$.ajax({
 	        data: parametros,
-	        url: 'queryValidation',
+	        url: 'queryResult',
 	        type: 'post',
 	        beforeSend: function () {
 	        	$('.loading').show();

@@ -15,9 +15,12 @@
 		</div>
 
 		<div class="form-group">
-			<button type="button" class="btn btn-success btn-lg" onclick="runCubeQuery();return false;">
+			<button type="button" class="btn btn-success btn-lg btn-margin" onclick="runCubeQuery();return false;">
     			<span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Ejecutar Query
   			</button>
+  			<a href="{!! URL::to('/') !!}" class="btn btn-danger btn-lg btn-margin">
+    			<span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;Terminar Operation
+  			</a>
   		</div>
 		
 		<div class="form-group">
@@ -26,11 +29,11 @@
 
 		<div class="form-group">
 			<div class="panel panel-info">
-			  	<div class="panel-heading text-left">Resultado de las Queries:</div>
+			  	<div class="panel-heading text-left">Resultados:</div>
 			  	<div class="panel-body" id="result"></div>
 			</div>
 		</div>
-
+		
 	{!! Form::close() !!}
 
 @stop

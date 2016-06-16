@@ -6,6 +6,7 @@ use Request;
 use Response;
 
 use App\Http\Requests;
+use App\Cube;
 
 class PaginasController extends Controller
 {
@@ -15,6 +16,9 @@ class PaginasController extends Controller
     	$aParams = [
 			'cubeDimensions' => $aPost['cubeDimensions']
 		];
+
+		//Limpiamos el cache de valores de bloques (cubo)
+		Cube::truncate();
 
     	return view('operations', $aParams)->with($aParams);
     }

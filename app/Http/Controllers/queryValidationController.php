@@ -12,18 +12,8 @@ class queryValidationController extends Controller
 {
 	var $cubeDimensions, $N;
 	var $query;
-
-    public function queryValidation() {
-    	$aPost = Request::all();
-    	
-    	// Datos POST
-    	$this->cubeDimensions = $this->N = (int) $aPost['cubeDimensions'];
-    	$this->query = $aPost['query'];
-
-    	return Response::json( $this->initValidation() );
-    }
-
-    private function initValidation() {
+    
+    public function initValidation() {
     	$errCod = 0;
     	$errMsg = $result = '';
 
@@ -44,10 +34,7 @@ class queryValidationController extends Controller
             $errMsg = 'El valor de un bloque debe estar entre -10^9 y 10^9';
         }
 
-    	if (!$errCod) {
-            //EN CONSTRUCCION!!!
-    		$result = "resultado de query";
-    	}
+        $result = (!$errCod) ? "ok" : "error";
 
 		return array(
 			'errCod' => $errCod,
