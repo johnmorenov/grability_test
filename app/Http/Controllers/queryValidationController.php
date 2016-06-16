@@ -12,7 +12,7 @@ class queryValidationController extends Controller
 {
 	var $cubeDimensions, $N;
 	var $query;
-    
+
     public function initValidation() {
     	$errCod = 0;
     	$errMsg = $result = '';
@@ -53,10 +53,7 @@ class queryValidationController extends Controller
 
     //Validacion #2 - Cantidad de parametros permitida
     private function parametersValidation() {
-    	$updateVals = $this->N + 1; //valores que vienen al lado de UPDATE
-    	$queryVals = $this->N * 2; //valores que vienen al lado de QUERY
-
-    	if (!preg_match('/^QUERY(\s+\-?\d+){'.$queryVals.'}$/i', $this->query) AND !preg_match('/^UPDATE(\s+\-?\d+){'.$updateVals.'}$/i', $this->query)) {
+    	if (!preg_match('/^QUERY(\s+\-?\d+){6}$/i', $this->query) AND !preg_match('/^UPDATE(\s+\-?\d+){4}$/i', $this->query)) {
     		return false;
     	}
     	return true;
