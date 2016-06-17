@@ -29,20 +29,20 @@ class QueryProcessingClass
 			switch ($aParts[0]) {
 				case 'QUERY':
 					$aPartsFinal['tipo'] = $aParts[0];
-					$aPartsFinal['x1'] = (int) $aParts[1];
-					$aPartsFinal['y1'] = (int) $aParts[2];
-					$aPartsFinal['z1'] = (int) $aParts[3];
-					$aPartsFinal['x2'] = (int) $aParts[4];
-					$aPartsFinal['y2'] = (int) $aParts[5];
-					$aPartsFinal['z2'] = (int) $aParts[6];
+					$aPartsFinal['x1'] = (isset($aParts[1])) ? (int) $aParts[1] : 0;
+					$aPartsFinal['y1'] = (isset($aParts[2])) ? (int) $aParts[2] : 0;
+					$aPartsFinal['z1'] = (isset($aParts[3])) ? (int) $aParts[3] : 0;
+					$aPartsFinal['x2'] = (isset($aParts[4])) ? (int) $aParts[4] : 0;
+					$aPartsFinal['y2'] = (isset($aParts[5])) ? (int) $aParts[5] : 0;
+					$aPartsFinal['z2'] = (isset($aParts[6])) ? (int) $aParts[6] : 0;
 					break;
 				
 				case 'UPDATE':
 					$aPartsFinal['tipo'] = $aParts[0];
-					$aPartsFinal['x1'] = (int) $aParts[1];
-					$aPartsFinal['y1'] = (int) $aParts[2];
-					$aPartsFinal['z1'] = (int) $aParts[3];
-					$aPartsFinal['W']  = (float) $aParts[4];
+					$aPartsFinal['x1'] = (isset($aParts[1])) ? (int) $aParts[1] : 0;
+					$aPartsFinal['y1'] = (isset($aParts[2])) ? (int) $aParts[2] : 0;
+					$aPartsFinal['z1'] = (isset($aParts[3])) ? (int) $aParts[3] : 0;
+					$aPartsFinal['W']  = (isset($aParts[4])) ? (int) $aParts[4] : 0;
 					break;
 			}
 		}

@@ -15,10 +15,10 @@
 		</div>
 
 		<div class="form-group">
-			<button type="button" class="btn btn-success btn-lg btn-margin" onclick="runCubeQuery();return false;">
+			<button type="button" class="btn btn-success btn-lg btn-margin" onclick="runCubeQuery();return false;" id="btnRun">
     			<span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;Ejecutar Query
   			</button>
-  			<a href="{!! URL::to('/') !!}" class="btn btn-danger btn-lg btn-margin">
+  			<a href="{!! URL::to('/') !!}" class="btn btn-danger btn-lg btn-margin" id="btnBack">
     			<span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;Terminar Operation
   			</a>
   		</div>

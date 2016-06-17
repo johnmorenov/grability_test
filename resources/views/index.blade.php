@@ -16,7 +16,7 @@
 		</div>
 		
 		<div class="form-group">
-			<button type="submit" class="btn btn-primary btn-lg btn-margin">
+			<button type="submit" class="btn btn-primary btn-lg btn-margin" id="btnGO">
     			<span class="glyphicon glyphicon-chevron-right"></span>&nbsp;&nbsp;Continuar
   			</button>
   		</div>

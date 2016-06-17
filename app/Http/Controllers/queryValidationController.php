@@ -43,6 +43,11 @@ class queryValidationController extends Controller
 		);
     }
 
+    public function setParameters($N, $query) {
+        $this->cubeDimensions = $this->N = $N;
+        $this->query = $query;
+    }
+
     //Validacion #1 - Sintaxis
     private function syntaxValidation() {
     	if (!preg_match('/^(QUERY|UPDATE)(\s+\-?\d+)+$/i', $this->query)) {
